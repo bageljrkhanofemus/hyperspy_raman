@@ -1,0 +1,11 @@
+signals:
+  MySignal:
+    signal_type: "MySignal"
+    signal_dimension: 1
+    dtype: real
+    lazy: False
+    import: hspy_ext.signal
+
+components1D:
+    MyComponent:
+      import: hspy_ext.component
