@@ -184,7 +184,7 @@ setup(
     #         'sample=sample:main',
     #     ],
     # },
-
+    entry_points={'hyperspy.extensions': 'hspy_ext = hspy_ext'},
     # List additional URLs that are relevant to your project as a dict.
     #
     # This field corresponds to the "Project-URL" metadata fields:
