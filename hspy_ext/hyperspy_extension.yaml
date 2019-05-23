@@ -15,14 +15,14 @@ signals:
     # True for LazySignal subclasses/
     lazy: False
     # The module where the signal is located.
-    import: hspy_ext.signal
+    module: hspy_ext.signal
 
 # 1D ``Component``s that the extension provides. The dictionary keys are the
 # name of the component subclass.
 components1D:
     MyComponent:
       # The module where the component is located.
-      import: hspy_ext.component
+      module: hspy_ext.component
 # GUI elements
 GUI:
   # In order to define assign a widget to a function, that function must declare
