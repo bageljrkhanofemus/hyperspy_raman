@@ -1,20 +1,43 @@
+# ``BaseSignal`` subclasses that the extension provides.
+# The dictionary keys are the name of the ``BaseSignal``'s subclasses
+# provided. 
 signals:
   MySignal:
+    # Each signal dictionary must contain the following keys
+    # The signal type is used by HyperSpy to decide which BaseSignal subclass
+    # to use for a particular dataset e.g. ``STEM_EELS_Spectrum``.
     signal_type: "MySignal"
+    # The dimension of the signal subspace. For example, 2 for images, 1 for
+    # spectra. If the signal can take any signal dimension, set it to -1.
     signal_dimension: 1
+    # The data type, "real" or "complex".
     dtype: real
+    # True for LazySignal subclasses/
     lazy: False
+    # The module where the signal is located.
     import: hspy_ext.signal
 
+# 1D ``Component``s that the extension provides. The dictionary keys are the
+# name of the component subclass.
 components1D:
     MyComponent:
+      # The module where the component is located.
       import: hspy_ext.component
-
+# GUI elements
 GUI:
+  # In order to define assign a widget to a function, that function must declare
+  # a `toolkey`. The `toolkeys` list contains a list of all the toolkeys
+  # provided by the extensions. In order to avoid name clashes, by convention
+  # toolkeys must start by the name of the packages that provides them.
   toolkeys:
     - hspy_ext.MyComponent
+  # A dictionary that contains all the widgets provided by the extension. The
+  # keys are the toolkit used by the widget e.g. "ipywidgets", "traitsui"...
   widgets:
     ipywidgets:
+      # Each widget is declared using a dictionary with two keys, `module` and `function`.
       hspy_ext.MyComponent:
-        module: hspy_ext.widgets
+        # The function that creates the widget
         function: get_mycomponent_widget
+        # The module where the function resides.
+        module: hspy_ext.widgets
