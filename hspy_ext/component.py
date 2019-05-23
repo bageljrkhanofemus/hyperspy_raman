@@ -1,10 +1,15 @@
 from hyperspy.component import Component
+from traits.api import CBool
+from hyperspy.ui_registry import add_gui_method
 
 
+@add_gui_method(toolkey="hspy_ext.MyComponent")
 class MyComponent(Component):
 
     """
     """
+
+    test_gui = CBool(True)
 
     def __init__(self, parameter_1=1, parameter_2=2):
         # Define the parameters

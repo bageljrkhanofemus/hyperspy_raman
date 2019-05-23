@@ -9,3 +9,12 @@ signals:
 components1D:
     MyComponent:
       import: hspy_ext.component
+
+GUI:
+  toolkeys:
+    - hspy_ext.MyComponent
+  widgets:
+    ipywidgets:
+      hspy_ext.MyComponent:
+        module: hspy_ext.widgets
+        function: get_mycomponent_widget
