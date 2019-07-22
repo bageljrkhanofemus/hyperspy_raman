@@ -17,12 +17,17 @@ signals:
     # The module where the signal is located.
     module: hspy_ext.signal
 
-# 1D ``Component``s that the extension provides. The dictionary keys are the
-# name of the component subclass.
+# 1D ``Component``s that the extension provides.
 components1D:
-    MyComponent:
-      # The module where the component is located.
-      module: hspy_ext.component
+  # _id_name of the component. It must be an UUID4. This can be generated
+  # using ``uuid.uuid4()``. Also, many editors can automatically generate
+  # UUIDs. The same UUID must be stored in the components ``_id_name`` attribute.
+  dcbd09ee-a420-4700-b60d-3a59e07e1237:
+    # The module where the component is located.
+    module: hspy_ext.component
+    # The actual class of the component
+    class: MyComponent1D
+
 # GUI elements
 GUI:
   # In order to define assign a widget to a function, that function must declare

@@ -14,6 +14,7 @@ class MyComponent(Component):
     def __init__(self, parameter_1=1, parameter_2=2):
         # Define the parameters
         Component.__init__(self, ('parameter_1', 'parameter_2'))
+        self._id_name = 'dcbd09ee-a420-4700-b60d-3a59e07e1237'
 
         # Optionally we can set the initial values
         self.parameter_1.value = parameter_1
