@@ -2,11 +2,13 @@
 # The dictionary keys are the name of the ``BaseSignal``'s subclasses
 # provided. 
 signals:
-  MySignal:
+  Raman:
     # Each signal dictionary must contain the following keys
     # The signal type is used by HyperSpy to decide which BaseSignal subclass
     # to use for a particular dataset e.g. ``STEM_EELS_Spectrum``.
-    signal_type: "MySignal"
+    signal_type: "Raman"
+    signal_type_aliases:
+      - rm
     # The dimension of the signal subspace. For example, 2 for images, 1 for
     # spectra. If the signal can take any signal dimension, set it to -1.
     signal_dimension: 1
@@ -16,8 +18,8 @@ signals:
     lazy: False
     # The module where the signal is located.
     module: hspy_ext.signal
-
 # 1D ``Component``s that the extension provides.
+'''
 components1D:
   # _id_name of the component. It must be an UUID4. This can be generated
   # using ``uuid.uuid4()``. Also, many editors can automatically generate
@@ -46,3 +48,4 @@ GUI:
         function: get_mycomponent_widget
         # The module where the function resides.
         module: hspy_ext.widgets
+'''

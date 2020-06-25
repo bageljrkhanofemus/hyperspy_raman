@@ -35,7 +35,7 @@ setup(
     # There are some restrictions on what makes a valid project name
     # specification here:
     # https://packaging.python.org/specifications/core-metadata/#name
-    name='HyperSpySampleExtension',  # Required
+    name='Raman',  # Required
 
     # Versions should comply with PEP 440:
     # https://www.python.org/dev/peps/pep-0440/
@@ -48,7 +48,7 @@ setup(
     # This is a one-line description or tagline of what your project does. This
     # corresponds to the "Summary" metadata field:
     # https://packaging.python.org/specifications/core-metadata/#summary
-    description='A sample HyperSpy Extension',  # Optional
+    description='An extension for manging Raman files in hyperspy',  # Optional
 
     # This is an optional longer description of your project that represents
     # the body of text which users will see when they visit PyPI.
@@ -76,15 +76,15 @@ setup(
     #
     # This field corresponds to the "Home-Page" metadata field:
     # https://packaging.python.org/specifications/core-metadata/#home-page-optional
-    url='https://github.com/hyperspy/hyperspysampleextension',  # Optional
+    url='https://github.com/bageljrkhanofemus/hyperspy_raman',  # Optional
 
     # This should be your name or the name of the organization which owns the
     # project.
-    author='The HyperSpy Developers',  # Optional
+    author='Aryan Agarwal',  # Optional
 
     # This should be a valid email address corresponding to the author listed
     # above.
-    # author_email='pypa-dev@googlegroups.com',  # Optional
+    author_email='aryan.agarwal@my.unt.edu',  # Optional
 
     # Classifiers help users find your project by categorizing it.
     #
@@ -94,10 +94,10 @@ setup(
         #   3 - Alpha
         #   4 - Beta
         #   5 - Production/Stable
-        'Development Status :: 3 - Alpha',
+        'Development Status :: 1 - Just starting',
 
         # Indicate who your project is intended for
-        'Intended Audience :: Developers',
+        'Intended Audience :: Internal Developers',
         'Topic :: Software Development :: Build Tools',
 
         # Pick your license as you wish
@@ -107,15 +107,15 @@ setup(
         # that you indicate whether you support Python 2, Python 3 or both.
         # These classifiers are *not* checked by 'pip install'. See instead
         # 'python_requires' below.
-        'Programming Language :: Python :: 3.6',
-        'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
+        #'Programming Language :: Python :: 3.7',
     ],
 
     # This field adds keywords for your project which will appear on the
     # project page. What does your project relate to?
     #
     # Note that this is a string of words separated by whitespace, not a list.
-    keywords='sample hyperspy extension',  # Optional
+    keywords='hyperspy extension',  # Optional
 
     # You can just specify package directories manually here if your project is
     # simple. Or you can use find_packages().
@@ -141,7 +141,7 @@ setup(
     #
     # For an analysis of "install_requires" vs pip's requirements files see:
     # https://packaging.python.org/en/latest/requirements.html
-    install_requires=['hyperspy>1.4'],  # Optional
+    install_requires=['hyperspy>1.4', 'renishawWiRE'],  # Optional
 
     # List additional groups of dependencies here (e.g. development
     # dependencies). Users will be able to install these using the "extras"
