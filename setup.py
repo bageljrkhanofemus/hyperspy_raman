@@ -19,7 +19,9 @@ here = path.abspath(path.dirname(__file__))
 # Get the long description from the README file
 with open(path.join(here, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
-
+with open("hspy_ext/version.txt", 'r') as file:
+    version = file.read(10)
+    file.close()
 # Arguments marked as "Required" below must be included for upload to PyPI.
 # Fields marked as "Optional" may be commented out.
 
@@ -43,7 +45,7 @@ setup(
     # For a discussion on single-sourcing the version across setup.py and the
     # project code, see
     # https://packaging.python.org/en/latest/single_source_version.html
-    version='1.0',  # Required
+    version = version,  # Required
 
     # This is a one-line description or tagline of what your project does. This
     # corresponds to the "Summary" metadata field:
@@ -94,10 +96,10 @@ setup(
         #   3 - Alpha
         #   4 - Beta
         #   5 - Production/Stable
-        'Development Status :: 1 - Just starting',
+        'Development Status :: 3 - Alpha',
 
         # Indicate who your project is intended for
-        'Intended Audience :: Internal Developers',
+        'Intended Audience :: Developers',
         'Topic :: Software Development :: Build Tools',
 
         # Pick your license as you wish
@@ -141,7 +143,7 @@ setup(
     #
     # For an analysis of "install_requires" vs pip's requirements files see:
     # https://packaging.python.org/en/latest/requirements.html
-    install_requires=['hyperspy>1.4', 'renishawWiRE'],  # Optional
+    install_requires=['hyperspy>1.4', 'renishawWiRE > 0.1.5'],  # Optional
 
     # List additional groups of dependencies here (e.g. development
     # dependencies). Users will be able to install these using the "extras"
